@@ -13,10 +13,16 @@ html, body{
 }
 
 .container{
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 40px 200px 40px;
+    grid-template-rows: 40px auto 40px;
+    grid-template-areas: 
+        ". h h h h h h h h h h ." 
+        "m c c c c c c c c c c c"
+        ". f f f f f f f f f f .";
     grid-gap: 3px;
+    box-sizing: border-box;
     padding: 15px;
 }
 
@@ -31,19 +37,17 @@ html, body{
 }
 
 .header{
-    grid-column: 1 / 12;
+    grid-area: h;
 }
 
 .menu{
-    grid-row: 1 / 4;
-    grid-column: 12;
-    min-width: 75px;
+    grid-area: m;
 }
 
 .content{
-    grid-column: 1 / 12;
+    grid-area: c;
 }
 
 .footer{
-    grid-column: 1 / 12;
+    grid-area: f;
 }
