@@ -1,1 +1,28 @@
-`
+html, body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    margin: 0;
+}
+
+.wrapper *  {
+    background-color: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1px;
+    margin-left: 1px;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 5fr 2fr;
+    grid-template-rows: 5fr 20fr 5fr;
+    grid-gap: 10px;
+    height: 100%;
+}
+
+header, footer{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
