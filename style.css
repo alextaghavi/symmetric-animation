@@ -3,26 +3,28 @@ html, body{
     width: 100%;
     font-size: 100%;
     margin: 0;
+    background-color: burlywood;
 }
 
-.wrapper *  {
-    background-color: orange;
+.container *{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1px;
-    margin-left: 1px;
 }
 
-.wrapper{
+.container{
     display: grid;
-    grid-template-columns: 1fr 5fr 2fr;
-    grid-template-rows: 5fr 20fr 5fr;
-    grid-gap: 10px;
-    height: 100%;
+    grid-template-columns: 100px auto;
+    grid-template-rows: 50px 50px 200px;
+    grid-gap: 3px
 }
 
-header, footer{
-    grid-column-start: 1;
-    grid-column-end: 4;
+.container>div:nth-child(odd){
+    background-color: lightcoral;
+}
+.container>div:nth-child(even){
+    background-color: lightblue;
+}
+.container>div:nth-child(4){
+    background-color: darkgreen;
 }
