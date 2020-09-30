@@ -15,12 +15,8 @@ html, body{
 .container{
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 40px auto 40px;
-    grid-template-areas: 
-        ". h h h h h h h h h h ." 
-        "m c c c c c c c c c c c"
-        ". f f f f f f f f f f .";
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, 100px);
     grid-gap: 3px;
     box-sizing: border-box;
     padding: 15px;
@@ -31,23 +27,4 @@ html, body{
 }
 .container>div:nth-child(even){
     background-color: lightblue;
-}
-.container>div:nth-child(4){
-    background-color: lightgreen;
-}
-
-.header{
-    grid-area: h;
-}
-
-.menu{
-    grid-area: m;
-}
-
-.content{
-    grid-area: c;
-}
-
-.footer{
-    grid-area: f;
 }
