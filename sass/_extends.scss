@@ -1,0 +1,13 @@
+%button{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    color: #333;
+    cursor: pointer;
+    @include transition;
+    height: 50px;
+    width: 125px;
+    &:hover{
+        transform: scale(0.98);
+    }
+}

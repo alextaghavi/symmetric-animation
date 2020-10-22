@@ -1,0 +1,65 @@
+@keyframes one-down-right {
+    0%       { 
+        visibility: visible; 
+    }
+    100%     { 
+        left: 100%;
+        top: 100%;
+        opacity: 0;
+    }
+}
+@keyframes one-down-left {
+    0%       { 
+        visibility: visible; 
+    }
+    100%     { 
+        left: 0;
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes one-up-right {
+    0%       { 
+        visibility: visible; 
+    }
+    100%     { 
+        left: 100%;
+        top: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes one-up-left {
+    0%       { 
+        visibility: visible; 
+    }
+    100%     { 
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+}
+@keyframes pulse {
+    0% {
+        background-color: #001F3F;
+    }
+    100% {
+        background-color: #FF4136;
+    }
+}
+
+@keyframes stretch {
+    0% {
+      transform: scale(.3);
+      background-color: red;
+      border-radius: 100%;
+    }
+    50% {
+      background-color: orange;
+    }
+    100% {
+      transform: scale(1.5);
+      background-color: yellow;
+    }
+  }

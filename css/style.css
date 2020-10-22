@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  height: 100%;
+  padding: 10%;
+}
+
+.btn button {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  height: 50px;
+  width: 125px;
+}
+.btn button:hover {
+  transform: scale(0.98);
+}
+
+@keyframes one-down-right {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    left: 100%;
+    top: 100%;
+    opacity: 0;
+  }
+}
+@keyframes one-down-left {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    left: 0;
+    top: 100%;
+    opacity: 0;
+  }
+}
+@keyframes one-up-right {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    left: 100%;
+    top: 0;
+    opacity: 0;
+  }
+}
+@keyframes one-up-left {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+}
+@keyframes pulse {
+  0% {
+    background-color: #001F3F;
+  }
+  100% {
+    background-color: #FF4136;
+  }
+}
+@keyframes stretch {
+  0% {
+    transform: scale(0.3);
+    background-color: red;
+    border-radius: 100%;
+  }
+  50% {
+    background-color: orange;
+  }
+  100% {
+    transform: scale(1.5);
+    background-color: yellow;
+  }
+}
+main {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+main > div {
+  background-image: url("https://images.unsplash.com/photo-1558114965-eeb97aa84c3b?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80");
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+main > div div.circle {
+  height: 50px;
+  width: 50px;
+  background: rgba(146, 146, 146, 0.8);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main > div div.circle-large-one, main > div div.circle-large-two, main > div div.circle-large-three, main > div div.circle-large-four, main > div div.circle-medium-one, main > div div.circle-medium-two, main > div div.circle-medium-three, main > div div.circle-medium-four, main > div div.circle-small-one, main > div div.circle-small-two, main > div div.circle-small-three, main > div div.circle-small-four {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(146, 146, 146, 0.8);
+  border-radius: 50%;
+  position: absolute;
+  visibility: hidden;
+}
+main > div div.circle-large-one, main > div div.circle-large-two, main > div div.circle-large-three, main > div div.circle-large-four {
+  width: 50px;
+  height: 50px;
+}
+main > div div.circle-medium-one, main > div div.circle-medium-two, main > div div.circle-medium-three, main > div div.circle-medium-four {
+  width: 35px;
+  height: 35px;
+}
+main > div div.circle-small-one, main > div div.circle-small-two, main > div div.circle-small-three, main > div div.circle-small-four {
+  width: 20px;
+  height: 20px;
+}
+main > div:nth-of-type(2) div.circle-large-one, main > div:nth-of-type(2) div.circle-medium-one, main > div:nth-of-type(2) div.circle-small-one {
+  animation: 3s ease-in-out forwards one-down-right;
+}
+main > div:nth-of-type(2) div.circle-large-two, main > div:nth-of-type(2) div.circle-medium-two, main > div:nth-of-type(2) div.circle-small-two {
+  animation: 3s ease-in-out forwards one-down-left;
+}
+main > div:nth-of-type(4) div.circle-large-one, main > div:nth-of-type(4) div.circle-medium-one, main > div:nth-of-type(4) div.circle-small-one {
+  animation: 3s ease-in-out forwards one-up-right;
+}
+main > div:nth-of-type(4) div.circle-large-two, main > div:nth-of-type(4) div.circle-medium-two, main > div:nth-of-type(4) div.circle-small-two {
+  animation: 3s ease-in-out forwards one-down-right;
+}
+main > div:nth-of-type(6) div.circle-large-one, main > div:nth-of-type(6) div.circle-medium-one, main > div:nth-of-type(6) div.circle-small-one {
+  animation: 3s ease-in-out forwards one-up-left;
+}
+main > div:nth-of-type(6) div.circle-large-two, main > div:nth-of-type(6) div.circle-medium-two, main > div:nth-of-type(6) div.circle-small-two {
+  animation: 3s ease-in-out forwards one-down-left;
+}
+main > div:nth-of-type(8) div.circle-large-one, main > div:nth-of-type(8) div.circle-medium-one, main > div:nth-of-type(8) div.circle-small-one {
+  animation: 3s ease-in-out forwards one-up-right;
+}
+main > div:nth-of-type(8) div.circle-large-two, main > div:nth-of-type(8) div.circle-medium-two, main > div:nth-of-type(8) div.circle-small-two {
+  animation: 3s ease-in-out forwards one-up-left;
+}
+main > div:nth-of-type(2) div.circle-medium-one, main > div:nth-of-type(2) div.circle-medium-two, main > div:nth-of-type(4) div.circle-medium-one, main > div:nth-of-type(4) div.circle-medium-two, main > div:nth-of-type(6) div.circle-medium-one, main > div:nth-of-type(6) div.circle-medium-two, main > div:nth-of-type(8) div.circle-medium-one, main > div:nth-of-type(8) div.circle-medium-two {
+  animation-delay: calc(1 * 400ms);
+}
+main > div:nth-of-type(2) div.circle-small-one, main > div:nth-of-type(2) div.circle-small-two, main > div:nth-of-type(4) div.circle-small-one, main > div:nth-of-type(4) div.circle-small-two, main > div:nth-of-type(6) div.circle-small-one, main > div:nth-of-type(6) div.circle-small-two, main > div:nth-of-type(8) div.circle-small-one, main > div:nth-of-type(8) div.circle-small-two {
+  animation-delay: calc(2 * 400ms);
+}
+main > div:nth-of-type(5) div.circle {
+  animation: 1.5s ease-in-out alternate pulse;
+}
+main > div:nth-of-type(5) div.circle-large-one, main > div:nth-of-type(5) div.circle-medium-one, main > div:nth-of-type(5) div.circle-small-one {
+  animation: 3s ease-in-out forwards one-up-left, 1.5s ease-in-out alternate pulse;
+}
+main > div:nth-of-type(5) div.circle-large-two, main > div:nth-of-type(5) div.circle-medium-two, main > div:nth-of-type(5) div.circle-small-two {
+  animation: 3s ease-in-out forwards one-down-left, 1.5s ease-in-out alternate pulse;
+}
+main > div:nth-of-type(5) div.circle-large-three, main > div:nth-of-type(5) div.circle-medium-three, main > div:nth-of-type(5) div.circle-small-three {
+  animation: 3s ease-in-out forwards one-up-right, 1.5s ease-in-out alternate pulse;
+}
+main > div:nth-of-type(5) div.circle-large-four, main > div:nth-of-type(5) div.circle-medium-four, main > div:nth-of-type(5) div.circle-small-four {
+  animation: 3s ease-in-out forwards one-down-right, 1.5s ease-in-out alternate pulse;
+}
+main > div:nth-of-type(5) div.circle-large-one, main > div:nth-of-type(5) div.circle-large-two, main > div:nth-of-type(5) div.circle-large-three, main > div:nth-of-type(5) div.circle-large-four {
+  animation-delay: calc(4.75 * 400ms);
+}
+main > div:nth-of-type(5) div.circle-medium-one, main > div:nth-of-type(5) div.circle-medium-two, main > div:nth-of-type(5) div.circle-medium-three, main > div:nth-of-type(5) div.circle-medium-four {
+  animation-delay: calc(5.75 * 400ms);
+}
+main > div:nth-of-type(5) div.circle-small-one, main > div:nth-of-type(5) div.circle-small-two, main > div:nth-of-type(5) div.circle-small-three, main > div:nth-of-type(5) div.circle-small-four {
+  animation-delay: calc(6.75 * 400ms);
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 0;
+}
+
+/*# sourceMappingURL=style.css.map */
